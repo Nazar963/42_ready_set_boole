@@ -2,6 +2,14 @@
 
 int main(void)
 {
+    std::string formu = "CD&B|A&";
+    std::cout << "Output desiderato: A|BC|BD|& -> ";
+    std::cout << conjunctive_normal_form(formu) << std::endl;
+
+    std::string formul = "AB&C|";
+    std::cout << "Output desiderato: AB|AC|& -> ";
+    std::cout << conjunctive_normal_form(formul) << std::endl;
+
     std::string formula = "AB&!";
     std::cout << "Output desiderato: A!B!| -> ";
     std::cout << conjunctive_normal_form(formula) << std::endl;

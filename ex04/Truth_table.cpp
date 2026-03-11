@@ -66,7 +66,7 @@ bool eval_tree(node *root, std::map<char, bool> &map)
 
     if (root->left == nullptr && root->right == nullptr)
     {
-        return isalpha(root->value) ? map[root->value] : root->value - '0';
+        return map[root->value];
     }
     if (root->left)
     {

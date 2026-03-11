@@ -177,7 +177,7 @@ node *resolve_negations(node *root, bool neg)
         delete root;
         return (result);
     }
-    if (isalpha(root->value) && isupper(root->value))
+    if (isalpha(root->value))
     {
         if (neg)
             result = create_operator_node('!', nullptr, create_node(root->value));

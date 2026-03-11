@@ -260,6 +260,8 @@ bool satter(std::vector<std::vector<std::string>> &cnf, std::map<char, bool> &ma
             else
                 letterale = map[b[0]];
             res = res | letterale;
+            if (res)
+                break;
         }
         if (!res)
             return (false);

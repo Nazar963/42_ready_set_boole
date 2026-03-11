@@ -7,8 +7,6 @@
 #include <random>
 #include <iomanip>
 
-// ----------------- Your encode (previous exercise) -----------------
-
 uint32_t spalma_bit(uint16_t x)
 {
     uint32_t res = 0;
@@ -32,11 +30,8 @@ double map(uint16_t x, uint16_t y)
     return (res);
 }
 
-// ----------------- Tests -----------------
-
-static void test_round_trip_fixed()
+void test_round_trip()
 {
-    // A few fixed edge-ish cases
     const std::pair<uint16_t, uint16_t> cases[] = {
         {0, 0},
         {1, 0},
@@ -58,11 +53,11 @@ static void test_round_trip_fixed()
         assert(xy[1] == y);
     }
 
-    std::cout << "OK: round-trip fixed cases\n";
+    std::cout << "OK: round-trip cases\n";
 }
 
 int main()
 {
-    test_round_trip_fixed();
+    test_round_trip();
     return 0;
 }
