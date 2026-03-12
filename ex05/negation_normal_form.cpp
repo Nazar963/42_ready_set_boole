@@ -1,22 +1,5 @@
 #include "negation_normal_form.hpp"
 
-static void printTree(const node *node, const std::string &prefix = "", bool isLeft = true)
-{
-    if (!node)
-        return;
-
-    // stampa prima il ramo destro così la radice resta più "centrata" visivamente
-    if (node->right)
-        printTree(node->right, prefix + (isLeft ? "│   " : "    "), false);
-
-    std::cout << prefix
-              << (isLeft ? "└── " : "┌── ")
-              << node->value << "\n";
-
-    if (node->left)
-        printTree(node->left, prefix + (isLeft ? "    " : "│   "), true);
-}
-
 std::string tree_to_string(const node *root)
 {
     if (!root)

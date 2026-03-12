@@ -44,13 +44,13 @@ void test_round_trip()
         {0, 65535},
         {65535, 65535}};
 
-    for (auto [x, y] : cases)
+    for (const auto &p : cases)
     {
-        double n = map(x, y);
+        double n = map(p.first, p.second);
         auto xy = inverse_function(n);
         assert(xy.size() == 2);
-        assert(xy[0] == x);
-        assert(xy[1] == y);
+        assert(xy[0] == p.first);
+        assert(xy[1] == p.second);
     }
 
     std::cout << "OK: round-trip cases\n";

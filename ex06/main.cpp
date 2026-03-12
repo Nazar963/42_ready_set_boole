@@ -3,7 +3,7 @@
 int main(void)
 {
     std::string formu = "CD&B|A&";
-    std::cout << "Output desiderato: A|BC|BD|& -> ";
+    std::cout << "Output desiderato: CB|DB|A&& -> ";
     std::cout << conjunctive_normal_form(formu) << std::endl;
 
     std::string formul = "AB&C|";
